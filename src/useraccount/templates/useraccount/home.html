@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Welcome to the Django Multiple User ! <span class="icon-emo-happy"></span></h2>
+  <p class="lead">
+    If you already have an account, go ahead and <a href="{% url 'login' %}">log in</a>. 
+</p>
+<p class="lead">
+    If you are new to Django Multiple User, get started
+    by creating a <a href="{% url 'student_signup' %}">HRD account</a> or a <a href="{% url 'teacher_signup' %}">FIN account</a>.
+  </p>
+  <hr>
+
+
+  <p>Want to run this code locally? <a href="https://github.com/sibtc/django-multiple-user-types-example/blob/master/README.md">Read detailed instructions on how to run this project</a>.</p>
+ 
+{% endblock %}

@@ -1,0 +1,22 @@
+{% load static %}
+<!doctype html>
+  <head>
+    <title>{% block title %}Django School{% endblock %}</title>
+  </head>
+  <body>
+   
+        {% if user.is_authenticated %}
+           <p>Logged in as <strong>{{ user.username }}</strong>. <a href="{% url 'logout' %}">Log out</a>.</p>
+              
+              {% else %}
+                <a href="{% url 'login' %}" class="btn btn-light" role="button">Log in</a>
+                <a href="{% url 'signup' %}" class="btn btn-primary" role="button">Sign up</a>
+              {% endif %}
+      
+              {% block content %}
+              {% endblock %}
+  </body>
+</html>
+
+
+
